@@ -19,6 +19,22 @@ import styles from './appStyles.module.css'
 import Form from './components/Form';
 import LifecycleA from './components/LifecycleA';
 import FragmentDemo from './components/FragmentDemo';
+import Table from './components/Table';
+import ParentComp from './components/ParentComp';
+import RefDemo from './components/RefDemo';
+import FocusInput from './components/FocusInput';
+import FRParentInput from './components/FRParentInput';
+import PortalDemo from './components/PortalDemo';
+import Hero from './components/Hero';
+import ErrorBoundary from './components/ErrorBoundary';
+import ClickCounter from './components/ClickCounter';
+import HoverCounter from './components/HoverCounter';
+import ClickCounterTwo from './components/ClickCounterTwo';
+import HoverCountTwo from './components/HoverCountTwo';
+import User from './components/User';
+import CounterTwo from './components/CounterTwo';
+
+
 
 
 
@@ -27,7 +43,45 @@ class App extends Component {
   render() {
     return (
       <div className="App" >
-        <FragmentDemo/>
+        <CounterTwo 
+        render={(count,incrementCount) => (
+        <ClickCounterTwo count={count} incrementCount={incrementCount}/>
+        )}
+        />
+
+       <CounterTwo 
+        render={(count,incrementCount) => (
+        <HoverCountTwo count={count} incrementCount={incrementCount}/>)}/>
+
+        {/*<ClickCounterTwo/>
+        <HoverCountTwo/>
+    <User render={(isLoggedIn) => isLoggedIn ? 'pallavi':'Guest'}/>*/}
+
+      {/*  <ClickCounter name='pallavi'/>
+        <HoverCounter/>*/}
+       {/* <ErrorBoundary>
+        <Hero heroName="Batman"/>
+        </ErrorBoundary>
+
+        <ErrorBoundary>
+        <Hero heroName="Superman"/>
+        </ErrorBoundary>
+
+        <ErrorBoundary>
+        <Hero heroName="joker"/>
+        </ErrorBoundary>*/}
+        
+    
+
+        {/*<PortalDemo/>*/}
+        {/*<FRParentInput/>*/}
+        {/*<FocusInput/>*/}
+        {/*<RefDemo/>*/}
+      
+
+       {/*} <ParentComp/>*/}
+        {/*<Table/>
+       <FragmentDemo/>*/}
 
        {/* <LifecycleA/> */}
        {/* <Form/>
